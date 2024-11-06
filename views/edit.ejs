@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Edit Post</title>
+  </head>
+  <body>
+    <h1>Edit the Post</h1>
+    <p>Post ID: <%= post.id %></p>
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+      <div class="two-form">
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+          <input  type="text" name="username" value="<%= post.username %>" required   />
+        </div>
+        <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" value="<%= post.email %>" required />
+        </div>
+      </div>
+      <div class="two-form">
+        <div class="input-box">
+            <i class="fa-solid fa-phone"></i>
+          <input type="number" name="age" value="<%= post.age %>" required />
+        </div>
+        <div class="input-box">
+            <i class="fa-solid fa-address-book"></i>
+          <input type="text" name="address" value="<%= post.address %>" required />
+        </div>
+      </div>
+      <div class="two-form">
+        <div class="input-box">
+            <i class="fa-solid fa-school"></i>
+          <input type="text" name="education"  value="<%= post.education %>" required/>
+        </div>
+        <div class="input-box">
+            <i class="fa-regular fa-calendar-days"></i>
+          <input type="date" name="dob" value="<%= post.dob %>" required />
+        </div>
+      </div>
+      <div class="input-box">
+        <textarea name="content"><%= post.content %></textarea>
+      </div>
+      <br /><br /><br />
+      <button class="btn">Submit</button>
+    </form>
+  </body>
+</html>

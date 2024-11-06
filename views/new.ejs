@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Add Post</title>
+  </head>
+  <body>
+    <h1>Create account</h1>
+    <div class="new-container">
+      <form method="post" action="/posts" enctype="multipart/form-data">
+        <div class="two-form">
+          <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              placeholder="Enter the username"
+              name="username"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+            <input
+              type="email"
+              placeholder="Enter the email"
+              name="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="two-form">
+          <div class="input-box">
+            <i class="fa-solid fa-phone"></i>
+            <input
+              type="number"
+              placeholder="Enter the age"
+              name="age"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <i class="fa-solid fa-address-book"></i>
+            <input
+              type="text"
+              placeholder="Enter the address"
+              name="address"
+              required
+            />
+          </div>
+        </div>
+        <div class="two-form">
+          <div class="input-box">
+            <i class="fa-solid fa-school"></i>
+            <input
+              type="text"
+              placeholder="Enter your education"
+              name="education"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <i class="fa-regular fa-calendar-days"></i>
+            <input
+              type="date"
+              placeholder="Enter the date of birth"
+              name="dob"
+              required
+            />
+          </div>
+        </div>
+        <div class="two-form">
+          <div class="input-box">
+            <textarea
+              name="content"
+              placeholder="Enter the post content..."
+              required
+            ></textarea>
+
+            <input type="file" name="image" accept="image/*" required />
+          </div>
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
